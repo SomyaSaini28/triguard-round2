@@ -1,98 +1,180 @@
-# TriGuard – Calibrated Risk Triage for Essential Medicine Supply Chains
+# 🏥 TriGuard
 
-## Team Details
-- **Team Name:** ERROR 1238
-- **Hackathon:** AI for Public Good – Sustainable & Resilient Supply Chains
-- **Institution:** Manipal University Jaipur
-- **Member 1:** Somya Saini
-- **Member 2:** Vaanya Kumawat
+## AI-Powered Calibrated Risk Triage for Essential Medicine Supply Chains
 
----
+TriGuard is an AI-powered decision support system developed for the **AI for Public Good – Sustainable & Resilient Supply Chains Hackathon** organized by **Manipal University Jaipur**.
 
-## Problem Statement
-Essential medicine supply chains are vulnerable to disruptions caused by supplier delays, low fill rates, route delays, demand spikes, weather risks, and stock shortages. In public health systems, such disruptions can lead to medicine stockouts at hospitals and primary care centers, directly affecting patient care.
-
-The challenge is not only to detect risk, but to prioritize which supply chain cases require immediate intervention, escalation, review, or monitoring.
+Instead of only predicting whether a supply chain disruption may occur, TriGuard estimates a **calibrated disruption probability** and converts it into actionable operational recommendations for healthcare planners responsible for essential medicine distribution.
 
 ---
 
-## Solution Overview
-**TriGuard** is an AI-powered calibrated risk triage system for essential medicine supply chains.
+# Problem Statement
 
-It predicts the probability of supply disruption for a medicine shipment / replenishment case and then converts that risk into an operational triage action such as:
+Healthcare supply chains frequently experience disruptions caused by supplier delays, transportation issues, weather events, inventory shortages, and sudden demand spikes.
 
-- **INTERVENE NOW**
-- **ESCALATE TO PLANNER**
-- **REVIEW**
-- **MONITOR**
+For essential medicines, delayed intervention may directly impact patient care. Traditional prediction systems often produce probability scores that are difficult for planners to interpret and trust.
 
-The system combines:
-1. **Machine Learning risk prediction**
-2. **Probability calibration**
-3. **Operational triage rules**
-4. **Interactive Streamlit prototype for case-level assessment**
+TriGuard addresses this challenge by combining machine learning with calibrated probability estimation and an operational triage engine.
 
 ---
 
-## Key Features
-- Predicts **disruption risk probability** for a supply chain case
-- Uses **calibrated probabilities** for more reliable risk interpretation
-- Converts model output into **actionable triage decisions**
-- Includes a **Streamlit prototype** for interactive testing
-- Designed for **essential medicine supply chain monitoring**
+# Key Features
+
+✅ Predict disruption risk using Machine Learning
+
+✅ Probability Calibration (Isotonic Calibration)
+
+✅ Operational Decision Support
+
+✅ Explainable AI Recommendations
+
+✅ Essential Medicine Supply Chain Focus
+
+✅ Interactive Streamlit Dashboard
+
+✅ Human-in-the-loop Decision Making
 
 ---
 
-## AI Approach Used
-TriGuard primarily uses:
-- **Predictive Analytics / Classification**
-- **Probability Calibration**
-- **Rule-based Decision Support**
+# System Workflow
 
-### Why this approach?
-The problem is about **anticipating future disruptions** from structured supply chain features such as:
-- supplier performance
-- lead time
-- route delays
-- weather risk
-- stock levels
-- demand spikes
-
-Therefore, a **predictive risk model** is appropriate.  
-Since operational teams need interpretable and usable risk scores, we calibrate model probabilities and then map them to triage actions.
+```
+Historical Supply Chain Data
+            │
+            ▼
+ Synthetic Data Generation
+            │
+            ▼
+ Feature Engineering Pipeline
+            │
+            ▼
+ Random Forest Classifier
+            │
+            ▼
+ Probability Calibration
+            │
+            ▼
+ Risk Probability
+            │
+            ▼
+ Decision Intelligence Engine
+            │
+            ▼
+Monitor → Review → Escalate → Intervene Now
+            │
+            ▼
+ Streamlit Dashboard
+```
 
 ---
 
-## Project Structure
+# Technology Stack
 
-```bash
+| Component | Technology |
+|------------|------------|
+| Programming Language | Python |
+| Machine Learning | Random Forest |
+| Calibration | Isotonic Calibration |
+| Data Processing | Pandas |
+| Numerical Computing | NumPy |
+| Model Persistence | Joblib |
+| Dashboard | Streamlit |
+| Version Control | Git & GitHub |
+
+---
+
+# Project Structure
+
+```
 triguard-round2/
+
 │
 ├── app/
-│   └── app.py
+│     app.py
 │
 ├── data/
-│   ├── raw/
-│   └── processed/
-│       └── supply_chain_cases.csv
-│
-├── docs/
-│   └── round2_document_draft.txt
-│
-├── notebooks/
+│     processed/
 │
 ├── outputs/
-│   ├── models/
-│   │   └── triguard_calibrated_model.pkl
-│   ├── predictions/
-│   │   └── sample_predictions.csv
-│   └── charts/
+│     models/
+│     predictions/
 │
 ├── src/
-│   ├── data_generation.py
-│   ├── train_model.py
-│   ├── predict.py
-│   └── calibrate_model.py
+│     data_generation.py
+│     train_model.py
+│     predict.py
+│     triage_logic.py
 │
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── LICENSE
+```
+
+---
+
+# Machine Learning Pipeline
+
+1. Generate synthetic healthcare supply chain dataset
+
+2. Preprocess categorical and numerical variables
+
+3. Train Random Forest classifier
+
+4. Calibrate prediction probabilities using Isotonic Calibration
+
+5. Generate disruption probability
+
+6. Convert probability into operational triage recommendations
+
+7. Display results through Streamlit
+
+---
+
+# Model Performance
+
+| Metric | Value |
+|---------|--------|
+| Accuracy | 70% |
+| ROC-AUC | 0.73 |
+| Calibration | Isotonic Regression |
+| Prediction Type | Binary Classification |
+
+---
+
+# Operational Triage
+
+| Risk Level | Recommendation |
+|------------|----------------|
+| Low | Monitor |
+| Medium | Review |
+| High | Escalate to Planner |
+| Very High | Immediate Intervention |
+
+---
+
+# Future Improvements
+
+- Real-time ERP integration
+- Live supplier monitoring
+- GIS-based disruption visualization
+- Explainable AI using SHAP values
+- Time-series forecasting integration
+- Multi-state deployment
+
+---
+
+# Team
+
+**Team Name:** ERROR 1238
+
+**Member 1:** Somya Saini
+
+**Member 2:** Vaanya Kumawat
+
+---
+
+# Hackathon
+
+AI for Public Good – Sustainable & Resilient Supply Chains
+
+Manipal University Jaipur
